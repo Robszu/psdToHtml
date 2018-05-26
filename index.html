@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PSD to Html - Forms</title>
+
+    <style>
+        body { background: #222; color: #fff; }
+
+        form {
+            border: 10px solid rgba(2, 2, 2, 0.3);
+            padding: 5px;
+            width: 300px;
+            /* display: grid; */
+            margin-top: 15px;
+            position: relative;
+        }
+        input, select, textarea {
+            display: block;
+            margin: 15px 5px 15px 5px;
+            width: 276px;
+            padding: 7px;
+            border-radius: 4px;
+
+        }
+       
+       input[type=checkbox] {
+           visibility: hidden;
+       }
+        
+       .check_btn {
+           width: 25px;
+           height: 25px;
+           background: blueviolet;
+           border-radius: 2px;
+           margin: 5px;
+           position: relative;
+           display: inline-block;
+           border: 1px solid white;
+       }
+       .check_btn label {
+           width: 15px;
+           height: 15px;
+          
+           z-index: 5;
+           position: absolute;
+           top: 5px;
+           left: 5px;
+           cursor: pointer;
+           border-radius: 2px;
+       }
+       .check_btn input[type=checkbox]:checked + label {
+           background: chartreuse;
+       }
+       .terms {
+           background: blueviolet;
+           width: 250px;
+           position: absolute;
+           top: -14px;
+           left: 40px;
+       }
+
+       /* submit btn styling */
+       .submit-btn {
+           width: calc(100% - 10px);
+           color: wheat;
+           background: rgb(131, 189, 45);
+       }
+       
+       /* Sign In Form */
+       .remember_me {
+           width: 100px;
+           
+         
+       }
+       .remember_btn {
+           position: absolute;
+           top: 106px;
+           right: 5px;
+           width: 120px;
+           
+       }
+      
+/* Send Email styling */
+
+.send textarea {
+    height: 218px;
+    width: 276px;
+}
+
+/* Recover Form */
+.recover_send {
+    width: 120px;
+    
+}
+.recover_done {
+    width: 120px;
+    position: absolute;
+    top: 100px;
+    right: 5px;
+}
+
+/* Subscribe Form */
+.subscribe {
+    width: 120px;
+}
+.subscribe_no {
+    width: 120px;
+    position: absolute;
+    top: 54px;
+    right: 5px;
+    background: red;
+}
+
+</style>
+    
+</head>
+<body>
+    <div class="logo logo_top">Logo</div>
+    <div class="container">
+        <div class="register">
+            <h3>Register form</h3>
+            <form action="#" autocomplete="on">
+                <!-- <label for="">Register Form</label> -->
+                <input type="text" name="name" placeholder="Username" autofocus>
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="confirm_pasword" placeholder="Confirm Password">
+                <input type="email" name="email" placeholder="Email">
+                <select name="location" id="location">
+                    <option value="" disabled selected>Your location</option>
+                    <option value="USA">USA</option>
+                    <option value="Poland">Poland</option>
+                    <option value="UK">UK</option>
+                    <option value="Japan">Japan</option>
+                </select>
+                <div class="check_btn">
+                
+                    <input class="checkbox" id="checkbox1" type="checkbox" name="checkbox" checked>
+                    <label class="check" for="checkbox1"></label>
+                    <p class="terms">I have read and accept the terms of use</p>
+                </div>
+                <input class="submit-btn" type="submit" name="sign_up" value="Sign up">
+            </form>
+        </div>
+        <div class="send">
+            <h3>Send Email</h3>
+            <form action="#">
+                <input type="text" name="yourname" placeholder="Your Name">
+                <input type="email" name="sendeamil" placeholder="Your Email">
+                <textarea rows="13" cols="34" name="textarea" placeholder="Type your message..."></textarea>
+               
+              
+
+                <div class="check_btn">
+                
+                    <input class="checkbox" id="checkbox2" type="checkbox" name="checkbox2" checked>
+                    <label class="check" for="checkbox2"></label>
+                    <p class="terms">Send a copy to my Email</p>
+                </div>
+                    <input class="submit-btn" type="submit" value="Send Email">
+               
+
+            </form>
+        </div>
+        <div class="sign">
+            <h3>Sign In Form</h3>
+            <form action="#" class="remember_form">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <div class="check_btn remember_check">
+                
+                    <input class="checkbox" id="checkbox2" type="checkbox" name="checkbox2" checked>
+                    <label class="check" for="checkbox2"></label>
+                    <p class="terms remember_me">Remember me</p>
+                    
+                </div>
+                <input class="submit-btn remember_btn" type="submit" value="Sign in">
+            </form>
+        </div>
+        <div class="recover">
+            <h3>Recover Form</h3>
+            <form action="#">
+                <input type="email" placeholder="Enter your Email">
+                <input type="text" placeholder="Enter your Phone number">
+                <input class="submit-btn recover_send" type="submit" name="send" value="Send">
+                <input class="submit-btn recover_done" type="submit" name="done" value="Done" >
+            </form>
+        </div>
+        <div class="subscribe">
+            <h3>Subscribe Form</h3>
+            <form action="#">
+                <input type="email" name="email" placeholder="Enter your Email">
+                <input class="submit-btn subscribe" type="submit" name="subscribe" value="Subscribe">
+                <input class="submit-btn subscribe_no" type="submit" name="no_subscribe" value="No, Thanks">
+            </form>
+        </div>
+    </div>
+    <div class="logo logo_bottom"></div>
+
+    
+</body>
+</html>
