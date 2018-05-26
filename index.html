@@ -114,12 +114,29 @@
     background: red;
 }
 
+/* Positioning forms (grid) */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-column-gap: 20px;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+
+/*positioning h3 */
+h3 {
+    text-align: center;
+}
+
+
 </style>
     
 </head>
 <body>
     <div class="logo logo_top">Logo</div>
     <div class="container">
+        <div class="left_forms">
         <div class="register">
             <h3>Register form</h3>
             <form action="#" autocomplete="on">
@@ -164,6 +181,8 @@
 
             </form>
         </div>
+    </div>
+    <div class="right_forms">
         <div class="sign">
             <h3>Sign In Form</h3>
             <form action="#" class="remember_form">
@@ -198,7 +217,7 @@
         </div>
     </div>
     <div class="logo logo_bottom"></div>
-
+</div>
     
 </body>
 </html>
